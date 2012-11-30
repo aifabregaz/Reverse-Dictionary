@@ -33,13 +33,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this._splitContainer = new System.Windows.Forms.SplitContainer();
-            this._textBox = new System.Windows.Forms.TextBox();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._dictionaryTextBox = new System.Windows.Forms.TextBox();
             this._toolStrip = new System.Windows.Forms.ToolStrip();
+            this._splitContainer = new System.Windows.Forms.SplitContainer();
+            this._textBox = new System.Windows.Forms.TextBox();
+            this._dictionatyTextBox = new System.Windows.Forms.TextBox();
             this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
             this._splitContainer.Panel1.SuspendLayout();
@@ -75,24 +75,6 @@
             this._openFileDialog.DefaultExt = "txt";
             resources.ApplyResources(this._openFileDialog, "_openFileDialog");
             // 
-            // _splitContainer
-            // 
-            resources.ApplyResources(this._splitContainer, "_splitContainer");
-            this._splitContainer.Name = "_splitContainer";
-            // 
-            // _splitContainer.Panel1
-            // 
-            this._splitContainer.Panel1.Controls.Add(this._textBox);
-            // 
-            // _splitContainer.Panel2
-            // 
-            this._splitContainer.Panel2.Controls.Add(this._dictionaryTextBox);
-            // 
-            // _textBox
-            // 
-            resources.ApplyResources(this._textBox, "_textBox");
-            this._textBox.Name = "_textBox";
-            // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
@@ -108,22 +90,40 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             // 
-            // _dictionaryTextBox
-            // 
-            resources.ApplyResources(this._dictionaryTextBox, "_dictionaryTextBox");
-            this._dictionaryTextBox.Name = "_dictionaryTextBox";
-            // 
             // _toolStrip
             // 
             resources.ApplyResources(this._toolStrip, "_toolStrip");
             this._toolStrip.Name = "_toolStrip";
             // 
+            // _splitContainer
+            // 
+            resources.ApplyResources(this._splitContainer, "_splitContainer");
+            this._splitContainer.Name = "_splitContainer";
+            // 
+            // _splitContainer.Panel1
+            // 
+            this._splitContainer.Panel1.Controls.Add(this._textBox);
+            // 
+            // _splitContainer.Panel2
+            // 
+            this._splitContainer.Panel2.Controls.Add(this._dictionatyTextBox);
+            // 
+            // _textBox
+            // 
+            resources.ApplyResources(this._textBox, "_textBox");
+            this._textBox.Name = "_textBox";
+            // 
+            // _dictionatyTextBox
+            // 
+            resources.ApplyResources(this._dictionatyTextBox, "_dictionatyTextBox");
+            this._dictionatyTextBox.Name = "_dictionatyTextBox";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._toolStrip);
             this.Controls.Add(this._splitContainer);
+            this.Controls.Add(this._toolStrip);
             this.Controls.Add(this._mainMenuStrip);
             this.MainMenuStrip = this._mainMenuStrip;
             this.Name = "MainForm";
@@ -146,13 +146,13 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog _openFileDialog;
-        private System.Windows.Forms.SplitContainer _splitContainer;
-        private System.Windows.Forms.TextBox _textBox;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.TextBox _dictionaryTextBox;
         private System.Windows.Forms.ToolStrip _toolStrip;
+        private System.Windows.Forms.SplitContainer _splitContainer;
+        private System.Windows.Forms.TextBox _textBox;
+        private System.Windows.Forms.TextBox _dictionatyTextBox;
     }
 }
 
