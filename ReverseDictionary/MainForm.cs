@@ -22,6 +22,8 @@ namespace ReverseDictionary
             _openFileDialog.Filter = _loaderFactory.GetAvailableLoaders();
         }
 
+        #region Event handlers
+
         private void OpenFileClick(object sender, EventArgs e)
         {
             if(_openFileDialog.ShowDialog() == DialogResult.Cancel)
@@ -32,5 +34,29 @@ namespace ReverseDictionary
             loader.LoadFile(_openFileDialog.FileName);
             _textBox.Text = loader.ExtractText();
         }
+
+        private void SaveButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AboutMenuItem1Click(object sender, EventArgs e)
+        {
+            var dlg = new AboutBox();
+            dlg.ShowDialog();
+        }
+
+        private void ExitMenuItemClick(object sender, EventArgs e)
+        {
+            // TODO: check for changes than save/close
+            Close();
+        }
+
+        private void CreateDictionaryButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }

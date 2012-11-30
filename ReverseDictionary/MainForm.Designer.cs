@@ -32,15 +32,24 @@
             this._mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this._toolStrip = new System.Windows.Forms.ToolStrip();
+            this._openButton = new System.Windows.Forms.ToolStripButton();
+            this._saveButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this._createDictionaryButton = new System.Windows.Forms.ToolStripButton();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._textBox = new System.Windows.Forms.TextBox();
             this._dictionatyTextBox = new System.Windows.Forms.TextBox();
             this._mainMenuStrip.SuspendLayout();
+            this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
             this._splitContainer.Panel1.SuspendLayout();
             this._splitContainer.Panel2.SuspendLayout();
@@ -50,7 +59,8 @@
             // _mainMenuStrip
             // 
             this._mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             resources.ApplyResources(this._mainMenuStrip, "_mainMenuStrip");
             this._mainMenuStrip.Name = "_mainMenuStrip";
             // 
@@ -70,15 +80,11 @@
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenFileClick);
             // 
-            // _openFileDialog
-            // 
-            this._openFileDialog.DefaultExt = "txt";
-            resources.ApplyResources(this._openFileDialog, "_openFileDialog");
-            // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveButtonClick);
             // 
             // toolStripSeparator1
             // 
@@ -89,11 +95,74 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitMenuItemClick);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.aboutToolStripMenuItem1});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            resources.ApplyResources(this.aboutToolStripMenuItem1, "aboutToolStripMenuItem1");
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.AboutMenuItem1Click);
+            // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.DefaultExt = "txt";
+            resources.ApplyResources(this._openFileDialog, "_openFileDialog");
             // 
             // _toolStrip
             // 
+            this._toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this._toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._openButton,
+            this._saveButton,
+            this.toolStripSeparator2,
+            this._createDictionaryButton});
             resources.ApplyResources(this._toolStrip, "_toolStrip");
             this._toolStrip.Name = "_toolStrip";
+            // 
+            // _openButton
+            // 
+            this._openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this._openButton, "_openButton");
+            this._openButton.Name = "_openButton";
+            this._openButton.Click += new System.EventHandler(this.OpenFileClick);
+            // 
+            // _saveButton
+            // 
+            this._saveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this._saveButton, "_saveButton");
+            this._saveButton.Name = "_saveButton";
+            this._saveButton.Click += new System.EventHandler(this.SaveButtonClick);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // _createDictionaryButton
+            // 
+            this._createDictionaryButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this._createDictionaryButton, "_createDictionaryButton");
+            this._createDictionaryButton.Name = "_createDictionaryButton";
+            this._createDictionaryButton.Click += new System.EventHandler(this.CreateDictionaryButtonClick);
             // 
             // _splitContainer
             // 
@@ -129,6 +198,8 @@
             this.Name = "MainForm";
             this._mainMenuStrip.ResumeLayout(false);
             this._mainMenuStrip.PerformLayout();
+            this._toolStrip.ResumeLayout(false);
+            this._toolStrip.PerformLayout();
             this._splitContainer.Panel1.ResumeLayout(false);
             this._splitContainer.Panel1.PerformLayout();
             this._splitContainer.Panel2.ResumeLayout(false);
@@ -153,6 +224,14 @@
         private System.Windows.Forms.SplitContainer _splitContainer;
         private System.Windows.Forms.TextBox _textBox;
         private System.Windows.Forms.TextBox _dictionatyTextBox;
+        private System.Windows.Forms.ToolStripButton _openButton;
+        private System.Windows.Forms.ToolStripButton _saveButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton _createDictionaryButton;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }
 
