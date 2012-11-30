@@ -33,8 +33,10 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,6 +50,8 @@
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._textBox = new System.Windows.Forms.TextBox();
             this._dictionatyTextBox = new System.Windows.Forms.TextBox();
+            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this._mainMenuStrip.SuspendLayout();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
@@ -60,6 +64,7 @@
             // 
             this._mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
             this.aboutToolStripMenuItem});
             resources.ApplyResources(this._mainMenuStrip, "_mainMenuStrip");
             this._mainMenuStrip.Name = "_mainMenuStrip";
@@ -69,6 +74,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -86,6 +92,11 @@
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveButtonClick);
             // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            resources.ApplyResources(this.saveAsToolStripMenuItem, "saveAsToolStripMenuItem");
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -96,6 +107,11 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitMenuItemClick);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             // 
             // aboutToolStripMenuItem
             // 
@@ -133,6 +149,7 @@
             this._toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._openButton,
             this._saveButton,
+            this.toolStripButton1,
             this.toolStripSeparator2,
             this._createDictionaryButton});
             resources.ApplyResources(this._toolStrip, "_toolStrip");
@@ -141,6 +158,7 @@
             // _openButton
             // 
             this._openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._openButton.Image = global::ReverseDictionary.Properties.Resources.fileopen;
             resources.ApplyResources(this._openButton, "_openButton");
             this._openButton.Name = "_openButton";
             this._openButton.Click += new System.EventHandler(this.OpenFileClick);
@@ -148,6 +166,7 @@
             // _saveButton
             // 
             this._saveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._saveButton.Image = global::ReverseDictionary.Properties.Resources.filesave;
             resources.ApplyResources(this._saveButton, "_saveButton");
             this._saveButton.Name = "_saveButton";
             this._saveButton.Click += new System.EventHandler(this.SaveButtonClick);
@@ -160,6 +179,7 @@
             // _createDictionaryButton
             // 
             this._createDictionaryButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._createDictionaryButton.Image = global::ReverseDictionary.Properties.Resources.fonts;
             resources.ApplyResources(this._createDictionaryButton, "_createDictionaryButton");
             this._createDictionaryButton.Name = "_createDictionaryButton";
             this._createDictionaryButton.Click += new System.EventHandler(this.CreateDictionaryButtonClick);
@@ -186,6 +206,18 @@
             // 
             resources.ApplyResources(this._dictionatyTextBox, "_dictionatyTextBox");
             this._dictionatyTextBox.Name = "_dictionatyTextBox";
+            // 
+            // _saveFileDialog
+            // 
+            this._saveFileDialog.DefaultExt = "txt";
+            resources.ApplyResources(this._saveFileDialog, "_saveFileDialog");
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.Name = "toolStripButton1";
             // 
             // MainForm
             // 
@@ -232,6 +264,10 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog _saveFileDialog;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

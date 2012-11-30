@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using ReverseDictionary.FileLoader;
+using ReverseDictionary.FileSaver;
 
 namespace ReverseDictionary
 {
@@ -37,7 +38,12 @@ namespace ReverseDictionary
 
         private void SaveButtonClick(object sender, EventArgs e)
         {
+            if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
 
+            TxtTextSaver saver = new TxtTextSaver();
+            //TODO: write dict to file
+            //TODO: add save as... handler
         }
 
         private void AboutMenuItem1Click(object sender, EventArgs e)
