@@ -70,6 +70,7 @@
     <Compile Include="FileLoader\TextLoaderFactory.cs" />
     <Compile Include="FileLoader\ITextLoader.cs" />
     <Compile Include="FileLoader\TxtTextLoader.cs" />
+    <Compile Include="FileSaver\TxtTextSaver.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -104,6 +106,64 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\agt_update_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filequickprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesaveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kids_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previos_sail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printmgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_here.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
