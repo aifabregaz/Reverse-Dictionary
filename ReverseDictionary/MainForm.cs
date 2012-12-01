@@ -24,6 +24,9 @@ namespace ReverseDictionary
             InitializeComponent();
 
             _openFileDialog.Filter = _loaderFactory.GetAvailableLoaders();
+
+            _langComboBox.Items.AddRange(Enum.GetValues(typeof(LanguagePrebuilt)).Cast<Object>().ToArray());
+            _langComboBox.SelectedIndex = 0;
         }
 
         #region Event handlers
@@ -69,7 +72,7 @@ namespace ReverseDictionary
 
             if (!String.IsNullOrEmpty(_textBox.Text))
                 _dictionary = _dictionaryMaker.MakeDictionary(_textBox.Text,
-                                                              new LemmatizerPrebuiltCompact(LanguagePrebuilt.Russian));
+                                                              new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
             _dictionatyTextBox.Lines = _dictionary.Keys.ToArray();
         }
 

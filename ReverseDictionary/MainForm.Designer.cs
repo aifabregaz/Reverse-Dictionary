@@ -45,13 +45,15 @@
             this._toolStrip = new System.Windows.Forms.ToolStrip();
             this._openButton = new System.Windows.Forms.ToolStripButton();
             this._saveButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._createDictionaryButton = new System.Windows.Forms.ToolStripButton();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._textBox = new System.Windows.Forms.TextBox();
             this._dictionatyTextBox = new System.Windows.Forms.TextBox();
             this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this._langLabel = new System.Windows.Forms.ToolStripLabel();
             this._mainMenuStrip.SuspendLayout();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
@@ -151,7 +153,9 @@
             this._saveButton,
             this.toolStripButton1,
             this.toolStripSeparator2,
-            this._createDictionaryButton});
+            this._createDictionaryButton,
+            this._langLabel,
+            this._langComboBox});
             resources.ApplyResources(this._toolStrip, "_toolStrip");
             this._toolStrip.Name = "_toolStrip";
             // 
@@ -170,6 +174,13 @@
             resources.ApplyResources(this._saveButton, "_saveButton");
             this._saveButton.Name = "_saveButton";
             this._saveButton.Click += new System.EventHandler(this.SaveButtonClick);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.Name = "toolStripButton1";
             // 
             // toolStripSeparator2
             // 
@@ -212,12 +223,15 @@
             this._saveFileDialog.DefaultExt = "txt";
             resources.ApplyResources(this._saveFileDialog, "_saveFileDialog");
             // 
-            // toolStripButton1
+            // _langComboBox
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
+            this._langComboBox.Name = "_langComboBox";
+            resources.ApplyResources(this._langComboBox, "_langComboBox");
+            // 
+            // _langLabel
+            // 
+            this._langLabel.Name = "_langLabel";
+            resources.ApplyResources(this._langLabel, "_langLabel");
             // 
             // MainForm
             // 
@@ -268,6 +282,8 @@
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog _saveFileDialog;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel _langLabel;
+        private System.Windows.Forms.ToolStripComboBox _langComboBox;
     }
 }
 
