@@ -92,13 +92,13 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveButtonClick);
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveFileClick);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             resources.ApplyResources(this.saveAsToolStripMenuItem, "saveAsToolStripMenuItem");
-            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsButtonClick);
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsClick);
             // 
             // toolStripSeparator1
             // 
@@ -174,7 +174,7 @@
             this._saveButton.Image = global::ReverseDictionary.Properties.Resources.filesave;
             resources.ApplyResources(this._saveButton, "_saveButton");
             this._saveButton.Name = "_saveButton";
-            this._saveButton.Click += new System.EventHandler(this.SaveButtonClick);
+            this._saveButton.Click += new System.EventHandler(this.SaveFileClick);
             // 
             // toolStripButton1
             // 
@@ -182,7 +182,7 @@
             this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
             resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.SaveAsButtonClick);
+            this.toolStripButton1.Click += new System.EventHandler(this.SaveAsClick);
             // 
             // toolStripSeparator2
             // 
@@ -219,6 +219,7 @@
             // 
             resources.ApplyResources(this._dictionatyTextBox, "_dictionatyTextBox");
             this._dictionatyTextBox.Name = "_dictionatyTextBox";
+            this._dictionatyTextBox.TextChanged += new System.EventHandler(this.TextChangedEvent);
             // 
             // _saveFileDialog
             // 

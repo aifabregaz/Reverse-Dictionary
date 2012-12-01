@@ -8,13 +8,11 @@ namespace ReverseDictionary.FileSaver
 {
     class TxtTextSaver
     {
-        private String _text;
-
-        public void SaveFile(String path)
+        public void SaveFile(String path, String text)
         {
             using(var streamWriter = new StreamWriter(path))
             {
-                streamWriter.Write(_text);
+                streamWriter.Write(text);
             }
         }
         public override string ToString()
