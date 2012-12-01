@@ -10,16 +10,16 @@ namespace ReverseDictionary.DictionaryMakers
         {
             var dictionary = new SortedDictionary<String, int>(new ReverseStringComparer());
 
-            var words = text.Split(new[] { ' ', ',', '.', ')', '(' }, StringSplitOptions.RemoveEmptyEntries);
+            var words = text.Split(new[] { ' ', ',', '.', ')', '(', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var word in words)
             {
-                string w = lemmatizer.Lemmatize(word.ToLower().Trim());
+                string lowerWord = lemmatizer.Lemmatize(word.ToLower().Trim());
 
-                if (!dictionary.ContainsKey(w))
-                    dictionary[w] = 1;
+                if (!dictionary.ContainsKey(lowerWord))
+                    dictionary[lowerWord] = 1;
                 else
-                    dictionary[w] += 1;
+                    dictionary[lowerWord] += 1;
             }
 
             return dictionary;

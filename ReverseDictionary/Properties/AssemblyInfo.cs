@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ReverseDictionary")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Reverse Dictionary Creator")]
+[assembly: AssemblyDescription("Reverse Dictionary Creator is software, which provides creation of reverse dictionaries from texts")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("BSUIR")]
 [assembly: AssemblyProduct("ReverseDictionary")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCopyright("Copyright ©  2012 Artem Stepanyuk, Azaranka Yauheni")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

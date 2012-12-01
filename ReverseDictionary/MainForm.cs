@@ -47,9 +47,13 @@ namespace ReverseDictionary
             if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            TxtTextSaver saver = new TxtTextSaver();
+            var saver = new TxtTextSaver();
             //TODO: write dict to file
-            //TODO: add save as... handler
+        }
+
+        private void SaveAsButtonClick(object sender, EventArgs e)
+        {
+            
         }
 
         private void AboutMenuItem1Click(object sender, EventArgs e)

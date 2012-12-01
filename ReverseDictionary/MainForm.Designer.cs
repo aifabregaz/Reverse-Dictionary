@@ -98,6 +98,7 @@
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             resources.ApplyResources(this.saveAsToolStripMenuItem, "saveAsToolStripMenuItem");
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsButtonClick);
             // 
             // toolStripSeparator1
             // 
@@ -181,6 +182,7 @@
             this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
             resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
             this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.SaveAsButtonClick);
             // 
             // toolStripSeparator2
             // 
@@ -225,8 +227,8 @@
             // 
             // _langComboBox
             // 
-            this._langComboBox.Name = "_langComboBox";
             resources.ApplyResources(this._langComboBox, "_langComboBox");
+            this._langComboBox.Name = "_langComboBox";
             // 
             // _langLabel
             // 
