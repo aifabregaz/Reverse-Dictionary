@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using LemmaSharp;
+using ReverseDictionary.DictionaryMakers;
 using ReverseDictionary.FileLoader;
 
 namespace ReverseDictionary
@@ -14,6 +15,8 @@ namespace ReverseDictionary
     public partial class MainForm : Form
     {
         private readonly TextLoaderFactory _loaderFactory = new TextLoaderFactory();
+        private readonly IDictionaryMaker _dictionaryMaker = new ReverseDictionaryMaker(); 
+        private IDictionary<String, int> _dictionary;
 
         public MainForm()
         {
@@ -54,7 +57,14 @@ namespace ReverseDictionary
 
         private void CreateDictionaryButtonClick(object sender, EventArgs e)
         {
+            // TODO: check for changes
+            if (!String.IsNullOrEmpty(_dictionatyTextBox.Text))
+                _dictionatyTextBox.Text = String.Empty;
 
+            if (!String.IsNullOrEmpty(_textBox.Text))
+                _dictionary = _dictionaryMaker.MakeDictionary(_textBox.Text,
+                                                              new LemmatizerPrebuiltCompact(LanguagePrebuilt.Russian));
+            _dictionatyTextBox.Lines = _dictionary.Keys.ToArray();
         }
 
         #endregion
