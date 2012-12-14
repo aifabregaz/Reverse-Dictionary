@@ -9,7 +9,8 @@ namespace ReverseDictionary.DictionaryMakers
     class ReverseDictionaryMaker : IDictionaryMaker
     {
         private Char[] _splitters = new Char[] { ' ', ',', '.', ';', ':', ')', '(', '\n', '!', 
-            '?', '/', '\\', '%', '$', '#', '@', '*', '`', '~', '=', '+', '•', '–' };
+            '?', '/', '\\', '%', '$', '#', '@', '*', '`', '~', '=', '+', '•', '–',
+            '«', '»', '\t', '[',  ']',  '\"', '<', '>', '{', '}'  };
 
 
         public IDictionary<string, int> MakeDictionary(string text, ILemmatizer lemmatizer)

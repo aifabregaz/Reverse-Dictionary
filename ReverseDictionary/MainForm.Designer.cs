@@ -48,12 +48,12 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._createDictionaryButton = new System.Windows.Forms.ToolStripButton();
+            this._langLabel = new System.Windows.Forms.ToolStripLabel();
+            this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._textBox = new System.Windows.Forms.TextBox();
             this._dictionatyTextBox = new System.Windows.Forms.TextBox();
             this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
-            this._langLabel = new System.Windows.Forms.ToolStripLabel();
             this._mainMenuStrip.SuspendLayout();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
@@ -197,6 +197,16 @@
             this._createDictionaryButton.Name = "_createDictionaryButton";
             this._createDictionaryButton.Click += new System.EventHandler(this.CreateDictionaryButtonClick);
             // 
+            // _langLabel
+            // 
+            this._langLabel.Name = "_langLabel";
+            resources.ApplyResources(this._langLabel, "_langLabel");
+            // 
+            // _langComboBox
+            // 
+            resources.ApplyResources(this._langComboBox, "_langComboBox");
+            this._langComboBox.Name = "_langComboBox";
+            // 
             // _splitContainer
             // 
             resources.ApplyResources(this._splitContainer, "_splitContainer");
@@ -225,16 +235,6 @@
             // 
             this._saveFileDialog.DefaultExt = "txt";
             resources.ApplyResources(this._saveFileDialog, "_saveFileDialog");
-            // 
-            // _langComboBox
-            // 
-            resources.ApplyResources(this._langComboBox, "_langComboBox");
-            this._langComboBox.Name = "_langComboBox";
-            // 
-            // _langLabel
-            // 
-            this._langLabel.Name = "_langLabel";
-            resources.ApplyResources(this._langLabel, "_langLabel");
             // 
             // MainForm
             // 
