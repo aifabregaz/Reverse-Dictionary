@@ -13,6 +13,7 @@ namespace ReverseDictionary.FileLoader
             _loaders = new List<ITextLoader>
             {
                 new TxtTextLoader(),
+                new RtfTextLoader(),
                 new DocTextLoader()
             };
         }

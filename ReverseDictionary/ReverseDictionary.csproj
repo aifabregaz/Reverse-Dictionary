@@ -67,6 +67,7 @@
     <Compile Include="DictionaryMakers\IDictionaryMaker.cs" />
     <Compile Include="DictionaryMakers\ReverseDictionaryMaker.cs" />
     <Compile Include="FileLoader\DocTextLoader.cs" />
+    <Compile Include="FileLoader\RtfTextLoader.cs" />
     <Compile Include="FileLoader\TextLoaderFactory.cs" />
     <Compile Include="FileLoader\ITextLoader.cs" />
     <Compile Include="FileLoader\TxtTextLoader.cs" />
