@@ -289,4 +289,3 @@
         private System.Windows.Forms.ToolStripComboBox _langComboBox;
     }
 }
-

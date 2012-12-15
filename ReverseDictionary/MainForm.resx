@@ -195,7 +195,7 @@
     <value>0, 0</value>
   </data>
   <data name="_mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>624, 24</value>
+    <value>847, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="_mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
@@ -280,7 +280,7 @@
     <value>0, 24</value>
   </data>
   <data name="_toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>624, 31</value>
+    <value>847, 31</value>
   </data>
   <data name="_toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -319,7 +319,7 @@
     <value>Vertical</value>
   </data>
   <data name="_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 387</value>
+    <value>375, 387</value>
   </data>
   <data name="_textBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -361,7 +361,7 @@
     <value>Vertical</value>
   </data>
   <data name="_dictionatyTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 387</value>
+    <value>468, 387</value>
   </data>
   <data name="_dictionatyTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -391,10 +391,10 @@
     <value>1</value>
   </data>
   <data name="_splitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>624, 387</value>
+    <value>847, 387</value>
   </data>
   <data name="_splitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>277</value>
+    <value>375</value>
   </data>
   <data name="_splitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -420,11 +420,14 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>56</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>624, 442</value>
+    <value>847, 442</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>640, 480</value>
