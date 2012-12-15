@@ -6,8 +6,8 @@ namespace ReverseDictionary.DictionaryMakers
 {
     class ReverseDictionaryMaker : IDictionaryMaker
     {
-        private readonly Char[] _splitters = new[] { ' ', ',', '.', ';', ':', ')', '(', '\n', '!', 
-            '?', '/', '\\', '%', '$', '#', '@', '*', '`', '~', '=', '+', '•', '–',
+        private readonly Char[] _splitters = new[] { ' ', ',', '.', ';', ':', ')', '(', '\r', '\n', '!', 
+            '?', '/', '\\', '%', '$', '#', '@', '*', '`', '~', '=', '+', '•', '—',
             '«', '»', '\t', '[',  ']',  '\"', '<', '>', '{', '}'  };
 
 
