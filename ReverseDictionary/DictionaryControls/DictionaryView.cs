@@ -33,7 +33,14 @@ namespace ReverseDictionary.DictionaryControls
 
         public void CompareToDictionary(IDictionary<String, int> otherDictionary)
         {
-
+            foreach (var pair in _dictionary)
+            {
+                if (otherDictionary.ContainsKey(pair.Key))
+                {
+                    // change background color
+                    _gridView.Rows.IndexOf()
+                }
+            }
         }
 
         public void CreateDictionary(String text)
