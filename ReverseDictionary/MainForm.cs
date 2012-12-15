@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using LemmaSharp;
+using ReverseDictionary.DictionaryControls;
 using ReverseDictionary.DictionaryMakers;
 using ReverseDictionary.FileLoader;
 using ReverseDictionary.FileSaver;
@@ -16,8 +17,7 @@ namespace ReverseDictionary
     public partial class MainForm : Form
     {
         private readonly TextLoaderFactory _loaderFactory = new TextLoaderFactory();
-        private readonly IDictionaryMaker _dictionaryMaker = new ReverseDictionaryMaker();
-        private IDictionary<String, int> _dictionary;
+        
         private bool _dictionaryChanged;
         private String _fileName = String.Empty;
 
@@ -27,14 +27,11 @@ namespace ReverseDictionary
 
             _openFileDialog.Filter = _loaderFactory.GetAvailableLoaders();
 
-            _langComboBox.Items.AddRange(Enum.GetValues(typeof(LanguagePrebuilt)).Cast<Object>().ToArray());
-            _langComboBox.SelectedItem = LanguagePrebuilt.Russian;
         }
 
         private void SaveFile()
         {
             var saver = new TxtTextSaver();
-            saver.SaveFile(_fileName, _dictionatyTextBox.Text);
         }
 
         #region Event handlers
@@ -96,23 +93,19 @@ namespace ReverseDictionary
             }
         }
 
-        private void CreateDictionaryButtonClick(object sender, EventArgs e)
+        private void NeedTextForDictionaryHandler(object sender, EventArgs e)
         {
-            // TODO: check for changes
-            if (!String.IsNullOrEmpty(_dictionatyTextBox.Text))
-                _dictionatyTextBox.Text = String.Empty;
+            var view = sender as DictionaryView;
 
-            if (!String.IsNullOrEmpty(_textBox.Text))
-                _dictionary = _dictionaryMaker.MakeDictionary(_textBox.Text,
-                                                              new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
-            _dictionatyTextBox.Lines = _dictionary.Keys.ToArray();
-        }
-
-        private void TextChangedEvent(object sender, EventArgs e)
-        {
-            _dictionaryChanged = true;
+            if(view != null)
+                view.CreateDictionary(_textBox.Text);
         }
 
         #endregion
+
+        private void dictionaryView1_NeedTextForDictionary(object sender, EventArgs e)
+        {
+
+        }
     }
 }

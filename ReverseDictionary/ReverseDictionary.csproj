@@ -64,8 +64,15 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="DictionaryControls\ViewItem.cs" />
     <Compile Include="DictionaryMakers\IDictionaryMaker.cs" />
     <Compile Include="DictionaryMakers\ReverseDictionaryMaker.cs" />
+    <Compile Include="DictionaryControls\DictionaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DictionaryControls\DictionaryView.Designer.cs">
+      <DependentUpon>DictionaryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileLoader\DocTextLoader.cs" />
     <Compile Include="FileLoader\RtfTextLoader.cs" />
     <Compile Include="FileLoader\TextLoaderFactory.cs" />
@@ -84,6 +91,9 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryControls\DictionaryView.resx">
+      <DependentUpon>DictionaryView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -99,6 +109,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\ReverseDictionary.DictionaryControls.ViewItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
