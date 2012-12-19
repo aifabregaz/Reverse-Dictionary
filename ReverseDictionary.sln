@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseDictionary", "ReverseDictionary\ReverseDictionary.csproj", "{5339266D-214C-44AD-8885-42BF2BF9CE80}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ReverseDictionarySetup", "ReverseDictionarySetup\ReverseDictionarySetup.vdproj", "{8D0E395C-7B80-484E-8887-7C8C417464D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,8 @@ Global
 		{5339266D-214C-44AD-8885-42BF2BF9CE80}.Debug|x86.Build.0 = Debug|x86
 		{5339266D-214C-44AD-8885-42BF2BF9CE80}.Release|x86.ActiveCfg = Release|x86
 		{5339266D-214C-44AD-8885-42BF2BF9CE80}.Release|x86.Build.0 = Release|x86
+		{8D0E395C-7B80-484E-8887-7C8C417464D5}.Debug|x86.ActiveCfg = Debug
+		{8D0E395C-7B80-484E-8887-7C8C417464D5}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,11 +35,11 @@ namespace ReverseDictionary.DictionaryControls
         {
             foreach (var pair in _dictionary)
             {
-                if (otherDictionary.ContainsKey(pair.Key))
-                {
-                    // change background color
-                    _gridView.Rows.IndexOf()
-                }
+                //if (otherDictionary.ContainsKey(pair.Key))
+                //{
+                //    // change background color
+                //    _gridView.Rows.IndexOf()
+                //}
             }
         }
 
