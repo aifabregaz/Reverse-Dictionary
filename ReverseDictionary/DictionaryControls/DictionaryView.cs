@@ -26,7 +26,7 @@ namespace ReverseDictionary.DictionaryControls
         public DictionaryView()
         {
             InitializeComponent();
-
+            
             _langComboBox.Items.AddRange(Enum.GetValues(typeof(LanguagePrebuilt)).Cast<Object>().ToArray());
             _langComboBox.SelectedItem = LanguagePrebuilt.Russian;
         }
