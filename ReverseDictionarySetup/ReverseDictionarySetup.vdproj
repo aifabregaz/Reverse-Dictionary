@@ -127,6 +127,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -393,7 +414,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ReverseDictionarySetup"
         "ProductCode" = "8:{8409CFE2-E7F7-4C41-933F-447BA9056899}"
-        "PackageCode" = "8:{0CEF7864-C389-4F33-A320-D51C5C991BD8}"
+        "PackageCode" = "8:{F7B342FD-9F3D-470F-9A61-74CD6469FFE5}"
         "UpgradeCode" = "8:{556183BF-3D79-4406-B9F8-0AB6C5D46122}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -914,7 +935,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_587F4B414663435ABD294A298E9F2C6C"
             {
-            "SourcePath" = "8:..\\ReverseDictionary\\obj\\x86\\Debug\\ReverseDictionary.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C7B26676D0C419E9D72E2BC3D7977CA"
