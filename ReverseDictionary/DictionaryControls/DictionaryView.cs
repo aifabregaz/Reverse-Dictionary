@@ -16,7 +16,7 @@ namespace ReverseDictionary.DictionaryControls
 
         public event EventHandler<EventArgs> NeedTextForDictionary;
 
-        public void OnNeedDictionary(EventArgs e)
+        public virtual void OnNeedDictionary(EventArgs e)
         {
             EventHandler<EventArgs> handler = NeedTextForDictionary;
             if(handler != null)
@@ -49,12 +49,35 @@ namespace ReverseDictionary.DictionaryControls
                 _dictionary = _dictionaryMaker.MakeDictionary(text,
                                                               new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
 
+            // TODO: do it with backgroung worker due to hangling gui
             _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
         }
 
         private void MakeButtonClick(object sender, EventArgs e)
         {
             OnNeedDictionary(e);
+        }
+
+        private void SaveClick(Object sender, EventArgs e)
+        {
+            if (_fileName == String.Empty)
+                SaveAsClick(sender, e);
+            else
+                SaveFile();
+        }
+
+        private void SaveAsClick(Object sender, EventArgs e)
+        {
+            if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            _fileName = _saveFileDialog.FileName;
+            SaveFile();
+        }
+
+        private void SaveFile()
+        {
+            throw new NotImplementedException();
         }
     }
 }

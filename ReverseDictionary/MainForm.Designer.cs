@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this._splitContainer = new System.Windows.Forms.SplitContainer();
+            this._textBox = new System.Windows.Forms.TextBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dictionaryView1 = new ReverseDictionary.DictionaryControls.DictionaryView();
+            this.dictionaryView2 = new ReverseDictionary.DictionaryControls.DictionaryView();
             this._mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,13 +45,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this._splitContainer = new System.Windows.Forms.SplitContainer();
-            this._textBox = new System.Windows.Forms.TextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dictionaryView1 = new ReverseDictionary.DictionaryControls.DictionaryView();
-            this.dictionaryView2 = new ReverseDictionary.DictionaryControls.DictionaryView();
-            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
             this._splitContainer.Panel1.SuspendLayout();
             this._splitContainer.Panel2.SuspendLayout();
@@ -55,7 +53,50 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this._mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // _splitContainer
+            // 
+            resources.ApplyResources(this._splitContainer, "_splitContainer");
+            this._splitContainer.Name = "_splitContainer";
+            // 
+            // _splitContainer.Panel1
+            // 
+            this._splitContainer.Panel1.Controls.Add(this._textBox);
+            // 
+            // _splitContainer.Panel2
+            // 
+            this._splitContainer.Panel2.Controls.Add(this.splitContainer1);
+            // 
+            // _textBox
+            // 
+            resources.ApplyResources(this._textBox, "_textBox");
+            this._textBox.Name = "_textBox";
+            // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dictionaryView1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dictionaryView2);
+            // 
+            // dictionaryView1
+            // 
+            resources.ApplyResources(this.dictionaryView1, "dictionaryView1");
+            this.dictionaryView1.Name = "dictionaryView1";
+            this.dictionaryView1.NeedTextForDictionary += new System.EventHandler<System.EventArgs>(this.NeedTextForDictionaryHandler);
+            // 
+            // dictionaryView2
+            // 
+            resources.ApplyResources(this.dictionaryView2, "dictionaryView2");
+            this.dictionaryView2.Name = "dictionaryView2";
             // 
             // _mainMenuStrip
             // 
@@ -127,53 +168,6 @@
             this._openFileDialog.DefaultExt = "txt";
             resources.ApplyResources(this._openFileDialog, "_openFileDialog");
             // 
-            // _splitContainer
-            // 
-            resources.ApplyResources(this._splitContainer, "_splitContainer");
-            this._splitContainer.Name = "_splitContainer";
-            // 
-            // _splitContainer.Panel1
-            // 
-            this._splitContainer.Panel1.Controls.Add(this._textBox);
-            // 
-            // _splitContainer.Panel2
-            // 
-            this._splitContainer.Panel2.Controls.Add(this.splitContainer1);
-            // 
-            // _textBox
-            // 
-            resources.ApplyResources(this._textBox, "_textBox");
-            this._textBox.Name = "_textBox";
-            // 
-            // splitContainer1
-            // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.dictionaryView1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dictionaryView2);
-            // 
-            // dictionaryView1
-            // 
-            resources.ApplyResources(this.dictionaryView1, "dictionaryView1");
-            this.dictionaryView1.Name = "dictionaryView1";
-            this.dictionaryView1.NeedTextForDictionary += new System.EventHandler<System.EventArgs>(this.NeedTextForDictionaryHandler);
-            // 
-            // dictionaryView2
-            // 
-            resources.ApplyResources(this.dictionaryView2, "dictionaryView2");
-            this.dictionaryView2.Name = "dictionaryView2";
-            // 
-            // _saveFileDialog
-            // 
-            this._saveFileDialog.DefaultExt = "txt";
-            resources.ApplyResources(this._saveFileDialog, "_saveFileDialog");
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -182,8 +176,6 @@
             this.Controls.Add(this._mainMenuStrip);
             this.MainMenuStrip = this._mainMenuStrip;
             this.Name = "MainForm";
-            this._mainMenuStrip.ResumeLayout(false);
-            this._mainMenuStrip.PerformLayout();
             this._splitContainer.Panel1.ResumeLayout(false);
             this._splitContainer.Panel1.PerformLayout();
             this._splitContainer.Panel2.ResumeLayout(false);
@@ -193,6 +185,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this._mainMenuStrip.ResumeLayout(false);
+            this._mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +207,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.SaveFileDialog _saveFileDialog;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DictionaryControls.DictionaryView dictionaryView1;
         private DictionaryControls.DictionaryView dictionaryView2;
