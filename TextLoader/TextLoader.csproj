@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileLoader\DocTextLoader.cs" />
+    <Compile Include="FileLoader\DocxTextLoader.cs" />
     <Compile Include="FileLoader\ITextLoader.cs" />
     <Compile Include="FileLoader\RtfTextLoader.cs" />
     <Compile Include="FileLoader\TextLoaderFactory.cs" />

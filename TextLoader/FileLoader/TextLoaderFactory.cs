@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace TextLoader.FileLoader
@@ -10,12 +12,13 @@ namespace TextLoader.FileLoader
 
         public TextLoaderFactory()
         {
-            _loaders = new List<ITextLoader>
+            _loaders = new List<ITextLoader>();
+
+            foreach (var textLoaders in Assembly.GetExecutingAssembly().GetTypes()
+                                            .Where(textLoaders => textLoaders.GetInterface("ITextLoader") != null))
             {
-                new TxtTextLoader(),
-                new RtfTextLoader(),
-                new DocTextLoader()
-            };
+                _loaders.Add((ITextLoader)Activator.CreateInstance(textLoaders));
+            }
         }
 
         public String GetAvailableLoaders()
@@ -23,7 +26,7 @@ namespace TextLoader.FileLoader
             var sb = new StringBuilder();
             foreach (var textLoader in _loaders)
             {
-                sb.Append(textLoader.ToString()).Append('|');
+                sb.Append(textLoader).Append('|');
             }
             sb.Remove(sb.Length - 1, 1);
 

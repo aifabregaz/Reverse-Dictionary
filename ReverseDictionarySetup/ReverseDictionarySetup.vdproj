@@ -465,7 +465,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ReverseDictionarySetup"
         "ProductCode" = "8:{8409CFE2-E7F7-4C41-933F-447BA9056899}"
-        "PackageCode" = "8:{8C83CAD9-A336-4213-AF0C-271C1F9989EF}"
+        "PackageCode" = "8:{F0B8D98C-C792-4C9E-858F-E80150AD2AA4}"
         "UpgradeCode" = "8:{556183BF-3D79-4406-B9F8-0AB6C5D46122}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
