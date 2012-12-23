@@ -22,13 +22,19 @@
         "Entry"
         {
         "MsmKey" = "8:_367E13FF25F4EA132F02EEF2D82DC2DB"
-        "OwnerKey" = "8:_587F4B414663435ABD294A298E9F2C6C"
+        "OwnerKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_367E13FF25F4EA132F02EEF2D82DC2DB"
-        "OwnerKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
+        "OwnerKey" = "8:_587F4B414663435ABD294A298E9F2C6C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4F18364C826E93C3D8C33A24C956E3AB"
+        "OwnerKey" = "8:_587F4B414663435ABD294A298E9F2C6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,13 +52,13 @@
         "Entry"
         {
         "MsmKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
-        "OwnerKey" = "8:_DEFF6773FD20C2B20321C058664A3688"
+        "OwnerKey" = "8:_513CAE0DC522E6508114DCE5E1C5D149"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
-        "OwnerKey" = "8:_513CAE0DC522E6508114DCE5E1C5D149"
+        "OwnerKey" = "8:_DEFF6773FD20C2B20321C058664A3688"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,19 +88,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_587F4B414663435ABD294A298E9F2C6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_367E13FF25F4EA132F02EEF2D82DC2DB"
+        "OwnerKey" = "8:_4F18364C826E93C3D8C33A24C956E3AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,6 +107,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DEFF6773FD20C2B20321C058664A3688"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_55D2E6BF1F30EE8B21A5ADC44DD1E9DE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_367E13FF25F4EA132F02EEF2D82DC2DB"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -164,6 +176,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -227,6 +247,37 @@
                     }
                 }
             "SourcePath" = "8:Lzma#.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3C7B26676D0C419E9D72E2BC3D7977CA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4F18364C826E93C3D8C33A24C956E3AB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:TextLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4F18364C826E93C3D8C33A24C956E3AB"
+                    {
+                    "Name" = "8:TextLoader.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:TextLoader.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C7B26676D0C419E9D72E2BC3D7977CA"
@@ -414,7 +465,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ReverseDictionarySetup"
         "ProductCode" = "8:{8409CFE2-E7F7-4C41-933F-447BA9056899}"
-        "PackageCode" = "8:{F7B342FD-9F3D-470F-9A61-74CD6469FFE5}"
+        "PackageCode" = "8:{8C83CAD9-A336-4213-AF0C-271C1F9989EF}"
         "UpgradeCode" = "8:{556183BF-3D79-4406-B9F8-0AB6C5D46122}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -935,7 +986,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_587F4B414663435ABD294A298E9F2C6C"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\ReverseDictionary\\obj\\Debug\\ReverseDictionary.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C7B26676D0C419E9D72E2BC3D7977CA"

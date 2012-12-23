@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
-namespace ReverseDictionary.FileSaver
+namespace TextLoader.FileSaver
 {
-    class TxtTextSaver
+    public class TxtTextSaver
     {
         public void SaveFile(String path, String text)
         {

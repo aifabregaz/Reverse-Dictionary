@@ -9,8 +9,8 @@ using System.Windows.Forms;
 using LemmaSharp;
 using ReverseDictionary.DictionaryControls;
 using ReverseDictionary.DictionaryMakers;
-using ReverseDictionary.FileLoader;
-using ReverseDictionary.FileSaver;
+using TextLoader.FileSaver;
+using TextLoader.FileLoader;
 
 namespace ReverseDictionary
 {

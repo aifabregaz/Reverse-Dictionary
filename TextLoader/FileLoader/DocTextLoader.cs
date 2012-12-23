@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ReverseDictionary.FileLoader
+namespace TextLoader.FileLoader
 {
     class DocTextLoader : ITextLoader
     {

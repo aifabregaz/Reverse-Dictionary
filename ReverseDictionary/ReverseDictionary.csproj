@@ -105,12 +105,6 @@
     <Compile Include="DictionaryControls\DictionaryView.Designer.cs">
       <DependentUpon>DictionaryView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileLoader\DocTextLoader.cs" />
-    <Compile Include="FileLoader\RtfTextLoader.cs" />
-    <Compile Include="FileLoader\TextLoaderFactory.cs" />
-    <Compile Include="FileLoader\ITextLoader.cs" />
-    <Compile Include="FileLoader\TxtTextLoader.cs" />
-    <Compile Include="FileSaver\TxtTextSaver.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,7 +146,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TextLoader\TextLoader.csproj">
+      <Project>{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}</Project>
+      <Name>TextLoader</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agt_update_critical.png" />
   </ItemGroup>

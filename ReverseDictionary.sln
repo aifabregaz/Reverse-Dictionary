@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseDictionary", "Revers
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ReverseDictionarySetup", "ReverseDictionarySetup\ReverseDictionarySetup.vdproj", "{8D0E395C-7B80-484E-8887-7C8C417464D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextLoader", "TextLoader\TextLoader.csproj", "{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{8D0E395C-7B80-484E-8887-7C8C417464D5}.Release|Any CPU.ActiveCfg = Release
 		{8D0E395C-7B80-484E-8887-7C8C417464D5}.Release|Any CPU.Build.0 = Release
 		{8D0E395C-7B80-484E-8887-7C8C417464D5}.Release|x86.ActiveCfg = Release
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8B6B9B-0BCD-4448-ADEB-E53059CBDE03}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

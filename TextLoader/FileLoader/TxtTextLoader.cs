@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ReverseDictionary.FileLoader
+namespace TextLoader.FileLoader
 {
     class TxtTextLoader : ITextLoader
     {

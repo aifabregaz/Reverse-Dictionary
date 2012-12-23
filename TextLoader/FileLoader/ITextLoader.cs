@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ReverseDictionary.FileLoader
+namespace TextLoader.FileLoader
 {
-    interface ITextLoader
+    public interface ITextLoader
     {
         void LoadFile(String path);
         String ExtractText();

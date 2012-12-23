@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ReverseDictionary.FileLoader
+namespace TextLoader.FileLoader
 {
     class RtfTextLoader : ITextLoader
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ReverseDictionary.FileLoader
+namespace TextLoader.FileLoader
 {
-    class TextLoaderFactory
+    public class TextLoaderFactory
     {
         private readonly IList<ITextLoader> _loaders;
 
