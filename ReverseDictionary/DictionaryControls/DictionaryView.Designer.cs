@@ -40,6 +40,8 @@
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._openDictButton = new System.Windows.Forms.Button();
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -136,10 +138,25 @@
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
             // 
+            // _openDictButton
+            // 
+            this._openDictButton.Location = new System.Drawing.Point(16, 82);
+            this._openDictButton.Name = "_openDictButton";
+            this._openDictButton.Size = new System.Drawing.Size(75, 23);
+            this._openDictButton.TabIndex = 2;
+            this._openDictButton.Text = "Open Dictionary";
+            this._openDictButton.UseVisualStyleBackColor = true;
+            this._openDictButton.Click += new System.EventHandler(this.OpenDictionary);
+            // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.Title = "Open Dictionary";
+            // 
             // DictionaryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this._openDictButton);
             this.Controls.Add(this._gridView);
             this.Controls.Add(this.toolStrip1);
             this.Name = "DictionaryView";
@@ -166,5 +183,7 @@
         private System.Windows.Forms.ToolStripLabel _langLabel;
         private System.Windows.Forms.ToolStripComboBox _langComboBox;
         private System.Windows.Forms.ToolStripButton _saveAsButton;
+        private System.Windows.Forms.Button _openDictButton;
+        private System.Windows.Forms.OpenFileDialog _openFileDialog;
     }
 }

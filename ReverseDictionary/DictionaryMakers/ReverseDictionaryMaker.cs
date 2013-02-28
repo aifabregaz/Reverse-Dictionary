@@ -9,11 +9,15 @@ namespace ReverseDictionary.DictionaryMakers
         private readonly Char[] _splitters = new[] { ' ', ',', '.', ';', ':', ')', '(', '\r', '\n', '!', 
             '?', '/', '\\', '%', '$', '#', '@', '*', '`', '~', '=', '+', '•', '—',
             '«', '»', '\t', '[',  ']',  '\"', '<', '>', '{', '}'  };
-
+        
+        public IDictionary<string, int> InitDictionary()
+        {
+            return new SortedDictionary<String, int>(new ReverseStringComparer());
+        }
 
         public IDictionary<string, int> MakeDictionary(string text, ILemmatizer lemmatizer)
         {
-            var dictionary = new SortedDictionary<String, int>(new ReverseStringComparer());
+            var dictionary = InitDictionary();
             var words = text.Split(_splitters, StringSplitOptions.RemoveEmptyEntries);
 
 
