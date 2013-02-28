@@ -59,7 +59,7 @@
             this._langComboBox});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(278, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(278, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -70,7 +70,7 @@
             this._saveButton.Image = global::ReverseDictionary.Properties.Resources.filesave;
             this._saveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._saveButton.Name = "_saveButton";
-            this._saveButton.Size = new System.Drawing.Size(23, 24);
+            this._saveButton.Size = new System.Drawing.Size(23, 22);
             this._saveButton.Text = "Save";
             this._saveButton.Click += new System.EventHandler(this.SaveDictionary);
             // 
@@ -81,14 +81,14 @@
             this._saveAsButton.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
             this._saveAsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._saveAsButton.Name = "_saveAsButton";
-            this._saveAsButton.Size = new System.Drawing.Size(23, 24);
+            this._saveAsButton.Size = new System.Drawing.Size(23, 22);
             this._saveAsButton.Text = "Save As";
             this._saveAsButton.Click += new System.EventHandler(this.SaveDictionaryAs);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // _makeButton
             // 
@@ -96,20 +96,20 @@
             this._makeButton.Image = global::ReverseDictionary.Properties.Resources.fonts;
             this._makeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._makeButton.Name = "_makeButton";
-            this._makeButton.Size = new System.Drawing.Size(23, 24);
+            this._makeButton.Size = new System.Drawing.Size(23, 22);
             this._makeButton.Text = "Make Dictionary";
             this._makeButton.Click += new System.EventHandler(this.MakeButtonClick);
             // 
             // _langLabel
             // 
             this._langLabel.Name = "_langLabel";
-            this._langLabel.Size = new System.Drawing.Size(59, 24);
+            this._langLabel.Size = new System.Drawing.Size(59, 22);
             this._langLabel.Text = "Language";
             // 
             // _langComboBox
             // 
             this._langComboBox.Name = "_langComboBox";
-            this._langComboBox.Size = new System.Drawing.Size(121, 23);
+            this._langComboBox.Size = new System.Drawing.Size(121, 25);
             // 
             // _gridView
             // 
@@ -120,9 +120,9 @@
             this.countDataGridViewTextBoxColumn});
             this._gridView.DataSource = this.viewItemBindingSource;
             this._gridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._gridView.Location = new System.Drawing.Point(0, 27);
+            this._gridView.Location = new System.Drawing.Point(0, 25);
             this._gridView.Name = "_gridView";
-            this._gridView.Size = new System.Drawing.Size(278, 264);
+            this._gridView.Size = new System.Drawing.Size(278, 266);
             this._gridView.TabIndex = 1;
             // 
             // _openDictButton

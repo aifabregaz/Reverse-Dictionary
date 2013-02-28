@@ -95,7 +95,7 @@ namespace ReverseDictionary.DictionaryControls
             else 
                 _dictionary.Clear();
             string[] strList = text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            foreach(var str in strList) {
+            foreach (var str in strList) {
                 string[] record = str.Split(' ');
                 _dictionary[record[0]] = Int32.Parse(record[1]);
             }
@@ -113,9 +113,7 @@ namespace ReverseDictionary.DictionaryControls
             if (String.IsNullOrEmpty(_fileName))
                 SaveDictionaryAs(sender, e);
             else
-            {
                 WriteDictToFile(_fileName);
-            }
         }
 
         private void SaveDictionaryAs(object sender, EventArgs e)
