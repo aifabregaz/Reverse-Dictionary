@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using LemmaSharp;
@@ -53,10 +54,19 @@ namespace ReverseDictionary.DictionaryControls
         public void CreateDictionary(String text)
         {
             if (!String.IsNullOrEmpty(text))
+            {
                 _dictionary = _dictionaryMaker.MakeDictionary(text,
                                                               new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
 
-            _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+                _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+
+                EnableSaveButtons(true);
+            }
+        }
+
+        public void EnableMakeDictionaryButton(bool value)
+        {
+            _makeButton.Enabled = value;
         }
 
         private void MakeButtonClick(object sender, EventArgs e)
@@ -71,8 +81,11 @@ namespace ReverseDictionary.DictionaryControls
 
             ITextLoader loader = _loaderFactory.GetLoader(_openFileDialog.FilterIndex);
             // Open and read file
-            loader.LoadFile(_openFileDialog.FileName);
+            _fileName = _openFileDialog.FileName;
+            loader.LoadFile(_fileName);
             DictFromTxt(loader.ExtractText());
+
+            EnableSaveButtons(true);
         }
 
         private void DictFromTxt(string text)
@@ -88,6 +101,37 @@ namespace ReverseDictionary.DictionaryControls
             }
 
             _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+        }
+
+        private void WriteDictToFile(string path)
+        {
+            File.WriteAllLines(path, _dictionary.Select(x => x.Key + " " + x.Value));
+        }
+
+        private void SaveDictionary(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(_fileName))
+                SaveDictionaryAs(sender, e);
+            else
+            {
+                WriteDictToFile(_fileName);
+            }
+        }
+
+        private void SaveDictionaryAs(object sender, EventArgs e)
+        {
+            _saveFileDialog.Filter = "Text files (*.txt)|*.txt";
+            _saveFileDialog.FileName = Path.GetFileName(_fileName);
+            if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            _fileName = _saveFileDialog.FileName;
+            WriteDictToFile(_fileName);
+        }
+
+        private void EnableSaveButtons(bool value)
+        {
+            _saveButton.Enabled = _saveAsButton.Enabled = value;
         }
     }
 }
