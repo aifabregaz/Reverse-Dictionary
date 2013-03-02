@@ -40,9 +40,9 @@
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._openDictButton = new System.Windows.Forms.Button();
             this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -51,6 +51,7 @@
             // _toolStrip
             // 
             this._toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
             this._saveButton,
             this._saveAsButton,
             this.toolStripSeparator1,
@@ -152,16 +153,6 @@
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
             // 
-            // _openDictButton
-            // 
-            this._openDictButton.Location = new System.Drawing.Point(16, 82);
-            this._openDictButton.Name = "_openDictButton";
-            this._openDictButton.Size = new System.Drawing.Size(75, 23);
-            this._openDictButton.TabIndex = 2;
-            this._openDictButton.Text = "Open Dictionary";
-            this._openDictButton.UseVisualStyleBackColor = true;
-            this._openDictButton.Click += new System.EventHandler(this.OpenDictionary);
-            // 
             // _openFileDialog
             // 
             this._openFileDialog.Title = "Open Dictionary";
@@ -170,11 +161,19 @@
             // 
             this._saveFileDialog.Title = "Save Dictionary";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.fileopen;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "_openDictButton";
+            // 
             // DictionaryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._openDictButton);
             this.Controls.Add(this._gridView);
             this.Controls.Add(this._toolStrip);
             this.Name = "DictionaryView";
@@ -200,11 +199,10 @@
         private System.Windows.Forms.ToolStripButton _makeButton;
         private System.Windows.Forms.ToolStripComboBox _langComboBox;
         private System.Windows.Forms.ToolStripButton _saveAsButton;
-        private System.Windows.Forms.Button _openDictButton;
         private System.Windows.Forms.OpenFileDialog _openFileDialog;
         private System.Windows.Forms.SaveFileDialog _saveFileDialog;
-        private System.Windows.Forms.SaveFileDialog _saveFileDialog;
         private System.Windows.Forms.ToolStripButton _sortDirectionButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
 
     }
 }

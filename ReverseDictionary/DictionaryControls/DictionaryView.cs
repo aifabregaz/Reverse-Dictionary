@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using LemmaSharp;
 using ReverseDictionary.DictionaryMakers;
+using TextLoader.FileLoader;
 using TextLoader.FileSaver;
 
 namespace ReverseDictionary.DictionaryControls
@@ -58,8 +59,8 @@ namespace ReverseDictionary.DictionaryControls
                 _dictionary = _dictionaryMaker.MakeDictionary(text,
                                                               new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
 
-            // TODO: do it with backgroung worker due to hangling gui
-            _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+                // TODO: do it with backgroung worker due to hangling gui
+                _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
                 EnableSaveButtons(true);
             }
         }
