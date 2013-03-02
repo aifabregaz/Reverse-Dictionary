@@ -35,12 +35,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this._makeButton = new System.Windows.Forms.ToolStripButton();
             this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
             this._gridView = new System.Windows.Forms.DataGridView();
-            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
+            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -102,6 +102,20 @@
             this._langComboBox.Size = new System.Drawing.Size(121, 25);
             this._langComboBox.ToolTipText = "Source text language";
             // 
+            // _sortDirectionButton
+            // 
+            this._sortDirectionButton.Checked = true;
+            this._sortDirectionButton.CheckOnClick = true;
+            this._sortDirectionButton.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._sortDirectionButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._sortDirectionButton.Image = global::ReverseDictionary.Properties.Resources.previos_sail;
+            this._sortDirectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._sortDirectionButton.Name = "_sortDirectionButton";
+            this._sortDirectionButton.Size = new System.Drawing.Size(23, 22);
+            this._sortDirectionButton.Text = "Sort Direction";
+            this._sortDirectionButton.ToolTipText = "Reverse sorting";
+            this._sortDirectionButton.CheckedChanged += new System.EventHandler(this.SortingOrderChanged);
+            // 
             // _gridView
             // 
             this._gridView.AutoGenerateColumns = false;
@@ -133,20 +147,6 @@
             // viewItemBindingSource
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
-            // 
-            // _sortDirectionButton
-            // 
-            this._sortDirectionButton.Checked = true;
-            this._sortDirectionButton.CheckOnClick = true;
-            this._sortDirectionButton.CheckState = System.Windows.Forms.CheckState.Checked;
-            this._sortDirectionButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._sortDirectionButton.Image = global::ReverseDictionary.Properties.Resources.previos_sail;
-            this._sortDirectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._sortDirectionButton.Name = "_sortDirectionButton";
-            this._sortDirectionButton.Size = new System.Drawing.Size(23, 22);
-            this._sortDirectionButton.Text = "Sort Direction";
-            this._sortDirectionButton.ToolTipText = "Reverse sorting";
-            this._sortDirectionButton.CheckedChanged += new System.EventHandler(this.SortingOrderChanged);
             // 
             // DictionaryView
             // 
