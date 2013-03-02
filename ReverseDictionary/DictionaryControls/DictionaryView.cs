@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using LemmaSharp;
 using ReverseDictionary.DictionaryMakers;
+using TextLoader.FileSaver;
 
 namespace ReverseDictionary.DictionaryControls
 {
@@ -75,9 +76,19 @@ namespace ReverseDictionary.DictionaryControls
             SaveFile();
         }
 
+        private void SortingOrderChanged(Object sender, EventArgs e)
+        {
+            _dictionary = _sortDirectionButton.Checked 
+                ? new SortedDictionary<string, int>(_dictionary, new ReverseStringComparer()) 
+                : new SortedDictionary<string, int>(_dictionary);
+        }
+
         private void SaveFile()
         {
-            throw new NotImplementedException();
+            var saver = new TxtTextSaver();
+            saver.SaveFile(_fileName, _gridView.Text);
         }
+
+        //private String 
     }
 }

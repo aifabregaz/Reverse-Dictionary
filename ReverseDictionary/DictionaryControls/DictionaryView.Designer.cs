@@ -40,6 +40,7 @@
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -52,7 +53,8 @@
             this._saveAsButton,
             this.toolStripSeparator1,
             this._makeButton,
-            this._langComboBox});
+            this._langComboBox,
+            this._sortDirectionButton});
             this._toolStrip.Location = new System.Drawing.Point(0, 0);
             this._toolStrip.Name = "_toolStrip";
             this._toolStrip.Size = new System.Drawing.Size(286, 25);
@@ -65,7 +67,7 @@
             this._saveButton.Image = global::ReverseDictionary.Properties.Resources.filesave;
             this._saveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._saveButton.Name = "_saveButton";
-            this._saveButton.Size = new System.Drawing.Size(23, 24);
+            this._saveButton.Size = new System.Drawing.Size(23, 22);
             this._saveButton.Text = "Save";
             this._saveButton.Click += new System.EventHandler(this.SaveClick);
             // 
@@ -75,14 +77,14 @@
             this._saveAsButton.Image = global::ReverseDictionary.Properties.Resources.filesaveas;
             this._saveAsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._saveAsButton.Name = "_saveAsButton";
-            this._saveAsButton.Size = new System.Drawing.Size(23, 24);
+            this._saveAsButton.Size = new System.Drawing.Size(23, 22);
             this._saveAsButton.Text = "Save As";
             this._saveAsButton.Click += new System.EventHandler(this.SaveAsClick);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // _makeButton
             // 
@@ -90,7 +92,7 @@
             this._makeButton.Image = global::ReverseDictionary.Properties.Resources.fonts;
             this._makeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._makeButton.Name = "_makeButton";
-            this._makeButton.Size = new System.Drawing.Size(23, 24);
+            this._makeButton.Size = new System.Drawing.Size(23, 22);
             this._makeButton.Text = "Make Dictionary";
             this._makeButton.Click += new System.EventHandler(this.MakeButtonClick);
             // 
@@ -132,6 +134,20 @@
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
             // 
+            // _sortDirectionButton
+            // 
+            this._sortDirectionButton.Checked = true;
+            this._sortDirectionButton.CheckOnClick = true;
+            this._sortDirectionButton.CheckState = System.Windows.Forms.CheckState.Checked;
+            this._sortDirectionButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._sortDirectionButton.Image = global::ReverseDictionary.Properties.Resources.previos_sail;
+            this._sortDirectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._sortDirectionButton.Name = "_sortDirectionButton";
+            this._sortDirectionButton.Size = new System.Drawing.Size(23, 22);
+            this._sortDirectionButton.Text = "Sort Direction";
+            this._sortDirectionButton.ToolTipText = "Reverse sorting";
+            this._sortDirectionButton.CheckedChanged += new System.EventHandler(this.SortingOrderChanged);
+            // 
             // DictionaryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,5 +178,6 @@
         private System.Windows.Forms.ToolStripComboBox _langComboBox;
         private System.Windows.Forms.ToolStripButton _saveAsButton;
         private System.Windows.Forms.SaveFileDialog _saveFileDialog;
+        private System.Windows.Forms.ToolStripButton _sortDirectionButton;
     }
 }
