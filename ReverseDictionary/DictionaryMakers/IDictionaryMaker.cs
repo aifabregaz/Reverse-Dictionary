@@ -12,6 +12,7 @@ namespace ReverseDictionary.DictionaryMakers
         /// <param name="text">Text, from which dictionary will be generated</param>
         /// <param name="lemmatizer">Lemmatizer, which used to lemmatise words</param>
         /// <returns>Dictionary</returns>
+        IDictionary<String, int> InitDictionary();
         IDictionary<String, int> MakeDictionary(String text, ILemmatizer lemmatizer);
     }
 }

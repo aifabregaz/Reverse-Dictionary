@@ -27,6 +27,7 @@ namespace ReverseDictionary
             // Open and read file
             loader.LoadFile(_openFileDialog.FileName);
             _textBox.Text = loader.ExtractText();
+            
         }
 
         private void AboutMenuItem1Click(Object sender, EventArgs e)
