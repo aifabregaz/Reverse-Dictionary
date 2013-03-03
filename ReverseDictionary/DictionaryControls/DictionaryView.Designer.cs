@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this._toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this._saveButton = new System.Windows.Forms.ToolStripButton();
             this._saveAsButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -37,12 +38,11 @@
             this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
             this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
             this._gridView = new System.Windows.Forms.DataGridView();
-            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -63,6 +63,16 @@
             this._toolStrip.Size = new System.Drawing.Size(286, 25);
             this._toolStrip.TabIndex = 0;
             this._toolStrip.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.fileopen;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "_openDictButton";
+            this.toolStripButton1.Click += new System.EventHandler(this.OpenDictionary);
             // 
             // _saveButton
             // 
@@ -135,24 +145,6 @@
             this._gridView.Size = new System.Drawing.Size(286, 266);
             this._gridView.TabIndex = 1;
             // 
-            // _openFileDialog
-            // 
-            this._openFileDialog.Title = "Open Dictionary";
-            // 
-            // _saveFileDialog
-            // 
-            this._saveFileDialog.Title = "Save Dictionary";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.fileopen;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "_openDictButton";
-            this.toolStripButton1.Click += new System.EventHandler(this.OpenDictionary);
-            // 
             // wordDataGridViewTextBoxColumn
             // 
             this.wordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -170,6 +162,14 @@
             // viewItemBindingSource
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
+            // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.Title = "Open Dictionary";
+            // 
+            // _saveFileDialog
+            // 
+            this._saveFileDialog.Title = "Save Dictionary";
             // 
             // DictionaryView
             // 
