@@ -40,18 +40,6 @@ namespace ReverseDictionary.DictionaryControls
 
         }
 
-        public void CompareToDictionary(IDictionary<String, int> otherDictionary)
-        {
-            foreach (var pair in _dictionary)
-            {
-                //if (otherDictionary.ContainsKey(pair.Key))
-                //{
-                //    // change background color
-                //    _gridView.Rows.IndexOf()
-                //}
-            }
-        }
-
         public void CreateDictionary(String text)
         {
             if (!String.IsNullOrEmpty(text))
@@ -87,6 +75,7 @@ namespace ReverseDictionary.DictionaryControls
             DictFromTxt(loader.ExtractText());
 
             EnableSaveButtons(true);
+            EnableChangeSortOrderButton(true);
         }
 
         private void DictFromTxt(string text)
@@ -132,7 +121,13 @@ namespace ReverseDictionary.DictionaryControls
         {
             _saveButton.Enabled = _saveAsButton.Enabled = value;
         }
-     private void SaveClick(Object sender, EventArgs e)
+
+        private void EnableChangeSortOrderButton(bool value)
+        {
+            _sortDirectionButton.Enabled = value;
+        }
+
+        private void SaveClick(Object sender, EventArgs e)
         {
             if (_fileName == String.Empty)
                 SaveAsClick(sender, e);
