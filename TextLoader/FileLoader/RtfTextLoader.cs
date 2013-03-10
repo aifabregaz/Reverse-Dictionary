@@ -1,22 +1,19 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TextLoader.FileLoader
 {
-    class RtfTextLoader : ITextLoader
+    internal class RtfTextLoader : ITextLoader
     {
-        private String _text;
-
+        private readonly RichTextBox _richTextBox = new RichTextBox();
+        
         public void LoadFile(string path)
         {
-            var rtfTempBox = new RichTextBox();
-            rtfTempBox.LoadFile(path, RichTextBoxStreamType.RichText);
-            _text = rtfTempBox.Text;
+            _richTextBox.LoadFile(path, RichTextBoxStreamType.RichText);
         }
 
         public string ExtractText()
         {
-            return _text;
+            return _richTextBox.Text;
         }
 
         public override string ToString()

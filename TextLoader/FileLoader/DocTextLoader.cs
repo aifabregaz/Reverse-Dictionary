@@ -2,7 +2,7 @@
 
 namespace TextLoader.FileLoader
 {
-    class DocTextLoader : ITextLoader
+    internal class DocTextLoader : ITextLoader
     {
         public void LoadFile(String path)
         {

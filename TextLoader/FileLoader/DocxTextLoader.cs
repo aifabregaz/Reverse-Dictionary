@@ -1,20 +1,28 @@
 ﻿using System;
+using System.IO;
+using NPOI.XWPF.UserModel;
+using NPOI.XWPF.Extractor;
 
 namespace TextLoader.FileLoader
 {
-    class DocxTextLoader : ITextLoader
+    internal class DocxTextLoader : ITextLoader
     {
-        public void LoadFile(string path)
+        private XWPFDocument _document;
+
+        public void LoadFile(String path)
         {
-            throw new NotImplementedException();
+            using(var file = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                _document = new XWPFDocument(file);
+            }
         }
 
         public string ExtractText()
         {
-            throw new NotImplementedException();
+            return new XWPFWordExtractor(_document).Text;
         }
 
-        public override string ToString()
+        public override String ToString()
         {
             return "MS Office 2007 files (*.docx)|*.docx";
         }
