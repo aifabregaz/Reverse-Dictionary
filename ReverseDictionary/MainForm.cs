@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ReverseDictionary.DictionaryControls;
 using TextLoader.FileLoader;
+using TextLoader.FileSaver;
 
 namespace ReverseDictionary
 {
@@ -65,6 +66,34 @@ namespace ReverseDictionary
 
             if (view != null)
                 view.CreateDictionary(_textBox.Text);
+        }
+
+        private void SaveFileClick(Object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CompareDictionaries(Object sender, EventArgs e)
+        {
+            if (dictionaryView1 == null || dictionaryView2 == null)
+                return;
+
+            
+        }
+
+        private void ClearSelected(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowSelected(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteSelected(Object sender, EventArgs e)
+        {
+
         }
 
         #endregion

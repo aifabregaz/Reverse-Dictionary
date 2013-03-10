@@ -38,11 +38,11 @@
             this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
             this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
             this._gridView = new System.Windows.Forms.DataGridView();
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -71,7 +71,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "_openDictButton";
+            this.toolStripButton1.Text = "Open Dictionary";
             this.toolStripButton1.Click += new System.EventHandler(this.OpenDictionary);
             // 
             // _saveButton
@@ -123,6 +123,7 @@
             this._sortDirectionButton.CheckOnClick = true;
             this._sortDirectionButton.CheckState = System.Windows.Forms.CheckState.Checked;
             this._sortDirectionButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._sortDirectionButton.Enabled = false;
             this._sortDirectionButton.Image = global::ReverseDictionary.Properties.Resources.previos_sail;
             this._sortDirectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._sortDirectionButton.Name = "_sortDirectionButton";
@@ -145,6 +146,15 @@
             this._gridView.Size = new System.Drawing.Size(286, 266);
             this._gridView.TabIndex = 1;
             // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.FilterIndex = 3;
+            this._openFileDialog.Title = "Open Dictionary";
+            // 
+            // _saveFileDialog
+            // 
+            this._saveFileDialog.Title = "Save Dictionary";
+            // 
             // wordDataGridViewTextBoxColumn
             // 
             this.wordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -162,14 +172,6 @@
             // viewItemBindingSource
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
-            // 
-            // _openFileDialog
-            // 
-            this._openFileDialog.Title = "Open Dictionary";
-            // 
-            // _saveFileDialog
-            // 
-            this._saveFileDialog.Title = "Save Dictionary";
             // 
             // DictionaryView
             // 

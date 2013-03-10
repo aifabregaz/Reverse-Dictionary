@@ -41,13 +41,18 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this._mainToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this._splitContainer = new System.Windows.Forms.SplitContainer();
             this._textBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this._compareDictionariesButton = new System.Windows.Forms.ToolStripButton();
+            this._clearSelectedButton = new System.Windows.Forms.ToolStripButton();
+            this._showSelectedButton = new System.Windows.Forms.ToolStripButton();
+            this._deleteSelectedButton = new System.Windows.Forms.ToolStripButton();
             this.dictionaryView1 = new ReverseDictionary.DictionaryControls.DictionaryView();
             this.dictionaryView2 = new ReverseDictionary.DictionaryControls.DictionaryView();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this._mainMenuStrip.SuspendLayout();
             this._mainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._splitContainer)).BeginInit();
@@ -134,9 +139,29 @@
             // 
             this._mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripSeparator2,
+            this._compareDictionariesButton,
+            this._clearSelectedButton,
+            this._showSelectedButton,
+            this._deleteSelectedButton});
             resources.ApplyResources(this._mainToolStrip, "_mainToolStrip");
             this._mainToolStrip.Name = "_mainToolStrip";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.fileopen;
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.OpenFileClick);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::ReverseDictionary.Properties.Resources.filesave;
+            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
+            this.toolStripButton2.Name = "toolStripButton2";
             // 
             // _splitContainer
             // 
@@ -169,6 +194,43 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dictionaryView2);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // _compareDictionariesButton
+            // 
+            this._compareDictionariesButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._compareDictionariesButton.Image = global::ReverseDictionary.Properties.Resources.document;
+            resources.ApplyResources(this._compareDictionariesButton, "_compareDictionariesButton");
+            this._compareDictionariesButton.Name = "_compareDictionariesButton";
+            this._compareDictionariesButton.Click += new System.EventHandler(this.CompareDictionaries);
+            // 
+            // _clearSelectedButton
+            // 
+            this._clearSelectedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._clearSelectedButton.Image = global::ReverseDictionary.Properties.Resources.agt_update_critical;
+            resources.ApplyResources(this._clearSelectedButton, "_clearSelectedButton");
+            this._clearSelectedButton.Name = "_clearSelectedButton";
+            this._clearSelectedButton.Click += new System.EventHandler(this.ClearSelected);
+            // 
+            // _showSelectedButton
+            // 
+            this._showSelectedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._showSelectedButton.Image = global::ReverseDictionary.Properties.Resources.start_here;
+            resources.ApplyResources(this._showSelectedButton, "_showSelectedButton");
+            this._showSelectedButton.Name = "_showSelectedButton";
+            this._showSelectedButton.Click += new System.EventHandler(this.ShowSelected);
+            // 
+            // _deleteSelectedButton
+            // 
+            this._deleteSelectedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._deleteSelectedButton.Image = global::ReverseDictionary.Properties.Resources.exec;
+            resources.ApplyResources(this._deleteSelectedButton, "_deleteSelectedButton");
+            this._deleteSelectedButton.Name = "_deleteSelectedButton";
+            this._deleteSelectedButton.Click += new System.EventHandler(this.DeleteSelected);
+            // 
             // dictionaryView1
             // 
             resources.ApplyResources(this.dictionaryView1, "dictionaryView1");
@@ -178,21 +240,6 @@
             // 
             resources.ApplyResources(this.dictionaryView2, "dictionaryView2");
             this.dictionaryView2.Name = "dictionaryView2";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ReverseDictionary.Properties.Resources.fileopen;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.OpenFileClick);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::ReverseDictionary.Properties.Resources.filesave;
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.Name = "toolStripButton2";
             // 
             // MainForm
             // 
@@ -242,5 +289,10 @@
         private DictionaryControls.DictionaryView dictionaryView2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton _compareDictionariesButton;
+        private System.Windows.Forms.ToolStripButton _clearSelectedButton;
+        private System.Windows.Forms.ToolStripButton _showSelectedButton;
+        private System.Windows.Forms.ToolStripButton _deleteSelectedButton;
     }
 }
