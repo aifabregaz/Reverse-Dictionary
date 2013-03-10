@@ -38,11 +38,11 @@
             this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
             this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
             this._gridView = new System.Windows.Forms.DataGridView();
-            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this._saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this._toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewItemBindingSource)).BeginInit();
@@ -146,15 +146,6 @@
             this._gridView.Size = new System.Drawing.Size(286, 266);
             this._gridView.TabIndex = 1;
             // 
-            // _openFileDialog
-            // 
-            this._openFileDialog.FilterIndex = 3;
-            this._openFileDialog.Title = "Open Dictionary";
-            // 
-            // _saveFileDialog
-            // 
-            this._saveFileDialog.Title = "Save Dictionary";
-            // 
             // wordDataGridViewTextBoxColumn
             // 
             this.wordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -172,6 +163,15 @@
             // viewItemBindingSource
             // 
             this.viewItemBindingSource.DataSource = typeof(ReverseDictionary.DictionaryControls.ViewItem);
+            // 
+            // _openFileDialog
+            // 
+            this._openFileDialog.FilterIndex = 3;
+            this._openFileDialog.Title = "Open Dictionary";
+            // 
+            // _saveFileDialog
+            // 
+            this._saveFileDialog.Title = "Save Dictionary";
             // 
             // DictionaryView
             // 

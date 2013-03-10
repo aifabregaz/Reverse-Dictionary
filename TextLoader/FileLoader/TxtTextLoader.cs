@@ -3,7 +3,7 @@ using System.IO;
 
 namespace TextLoader.FileLoader
 {
-    class TxtTextLoader : ITextLoader
+    internal class TxtTextLoader : ITextLoader
     {
         private String _text;
 
