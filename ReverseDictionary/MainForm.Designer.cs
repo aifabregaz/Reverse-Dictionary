@@ -43,14 +43,14 @@
             this._mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this._splitContainer = new System.Windows.Forms.SplitContainer();
-            this._textBox = new System.Windows.Forms.TextBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this._compareDictionariesButton = new System.Windows.Forms.ToolStripButton();
             this._clearSelectedButton = new System.Windows.Forms.ToolStripButton();
             this._showSelectedButton = new System.Windows.Forms.ToolStripButton();
             this._deleteSelectedButton = new System.Windows.Forms.ToolStripButton();
+            this._splitContainer = new System.Windows.Forms.SplitContainer();
+            this._textBox = new System.Windows.Forms.TextBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dictionaryView1 = new ReverseDictionary.DictionaryControls.DictionaryView();
             this.dictionaryView2 = new ReverseDictionary.DictionaryControls.DictionaryView();
             this._mainMenuStrip.SuspendLayout();
@@ -163,37 +163,6 @@
             resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
             this.toolStripButton2.Name = "toolStripButton2";
             // 
-            // _splitContainer
-            // 
-            resources.ApplyResources(this._splitContainer, "_splitContainer");
-            this._splitContainer.Name = "_splitContainer";
-            // 
-            // _splitContainer.Panel1
-            // 
-            this._splitContainer.Panel1.Controls.Add(this._textBox);
-            // 
-            // _splitContainer.Panel2
-            // 
-            this._splitContainer.Panel2.Controls.Add(this.splitContainer1);
-            // 
-            // _textBox
-            // 
-            resources.ApplyResources(this._textBox, "_textBox");
-            this._textBox.Name = "_textBox";
-            // 
-            // splitContainer1
-            // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.dictionaryView1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dictionaryView2);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -231,15 +200,48 @@
             this._deleteSelectedButton.Name = "_deleteSelectedButton";
             this._deleteSelectedButton.Click += new System.EventHandler(this.DeleteSelected);
             // 
+            // _splitContainer
+            // 
+            resources.ApplyResources(this._splitContainer, "_splitContainer");
+            this._splitContainer.Name = "_splitContainer";
+            // 
+            // _splitContainer.Panel1
+            // 
+            this._splitContainer.Panel1.Controls.Add(this._textBox);
+            // 
+            // _splitContainer.Panel2
+            // 
+            this._splitContainer.Panel2.Controls.Add(this.splitContainer1);
+            // 
+            // _textBox
+            // 
+            resources.ApplyResources(this._textBox, "_textBox");
+            this._textBox.Name = "_textBox";
+            // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dictionaryView1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dictionaryView2);
+            // 
             // dictionaryView1
             // 
             resources.ApplyResources(this.dictionaryView1, "dictionaryView1");
             this.dictionaryView1.Name = "dictionaryView1";
+            this.dictionaryView1.NeedTextForDictionary += new System.EventHandler<System.EventArgs>(this.NeedTextForDictionaryHandler);
             // 
             // dictionaryView2
             // 
             resources.ApplyResources(this.dictionaryView2, "dictionaryView2");
             this.dictionaryView2.Name = "dictionaryView2";
+            this.dictionaryView2.NeedTextForDictionary += new System.EventHandler<System.EventArgs>(this.NeedTextForDictionaryHandler);
             // 
             // MainForm
             // 
