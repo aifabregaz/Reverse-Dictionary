@@ -204,8 +204,8 @@
         private System.Windows.Forms.ToolStripButton _saveAsButton;
         private System.Windows.Forms.OpenFileDialog _openFileDialog;
         private System.Windows.Forms.SaveFileDialog _saveFileDialog;
-        private System.Windows.Forms.ToolStripButton _sortDirectionButton;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton _sortDirectionButton;
 
     }
 }
