@@ -77,8 +77,9 @@ namespace ReverseDictionary
         {
             if (dictionaryView1 == null || dictionaryView2 == null)
                 return;
-
             
+            dictionaryView1.CompareTo(dictionaryView2.GetItems());
+            dictionaryView2.CompareTo(dictionaryView1.GetItems());
         }
 
         private void ClearSelected(Object sender, EventArgs e)

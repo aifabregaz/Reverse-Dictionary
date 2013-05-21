@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,12 +16,18 @@ namespace ReverseDictionary.DictionaryControls
         private readonly TextLoaderFactory _loaderFactory = new TextLoaderFactory();
 
         private IDictionary<String, int> _dictionary;
+        private IList<ViewItem> _dataSource;
         private readonly IDictionaryMaker _dictionaryMaker = new ReverseDictionaryMaker();
         private bool _dictionaryChanged;
         private String _fileName = String.Empty;
 
         
         public event EventHandler<EventArgs> NeedTextForDictionary;
+
+        public IList<ViewItem> GetItems()
+        {
+            return _dataSource;
+        }
 
         public virtual void OnNeedDictionary(EventArgs e)
         {
@@ -49,7 +56,7 @@ namespace ReverseDictionary.DictionaryControls
 
                 // TODO: do it with backgroung worker due to hangling gui
                 SetDataSource(_dictionary);
-
+                
                 EnableSaveButtons(true);
                 EnableChangeSortOrderButton(true);
             }
@@ -62,7 +69,8 @@ namespace ReverseDictionary.DictionaryControls
 
         private void SetDataSource(IDictionary<String, int> dict)
         {
-            _gridView.DataSource = dict.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+            _dataSource = dict.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+            _gridView.DataSource = _dataSource;
         }
 
         private void MakeButtonClick(object sender, EventArgs e)
@@ -97,12 +105,13 @@ namespace ReverseDictionary.DictionaryControls
                 _dictionary[record[0]] = Int32.Parse(record[1]);
             }
 
-            _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+            SetDataSource(_dictionary);
         }
 
         private void WriteDictToFile(string path)
         {
-            File.WriteAllLines(path, _dictionary.Select(x => x.Key + " " + x.Value));
+            //File.WriteAllLines(path, _dataSource.Select(x => x.Word + " " + x.Count));
+            _saver.SaveFile(path, _dataSource.Select(x => x.Word + " " + x.Count).ToList());
         }
 
         private void SaveDictionary(object sender, EventArgs e)
@@ -113,12 +122,23 @@ namespace ReverseDictionary.DictionaryControls
                 WriteDictToFile(_fileName);
         }
 
+        private ITextSaver _saver = new TxtTextSaver();
+
         private void SaveDictionaryAs(object sender, EventArgs e)
         {
-            _saveFileDialog.Filter = "Text files (*.txt)|*.txt";
+            _saveFileDialog.Filter = "Text files (*.txt)|*.txt| Excel files (*.xls)|*.xls";
             _saveFileDialog.FileName = Path.GetFileName(_fileName);
             if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
+
+            if(_saveFileDialog.FilterIndex == 1)
+            {
+                _saver = new TxtTextSaver();
+            }
+            else
+            {
+                _saver = new XlsTextSaver();
+            }
 
             _fileName = _saveFileDialog.FileName;
             WriteDictToFile(_fileName);
@@ -162,7 +182,26 @@ namespace ReverseDictionary.DictionaryControls
         private void SaveFile()
         {
             var saver = new TxtTextSaver();
-            saver.SaveFile(_fileName, _gridView.Text);
+            //saver.SaveFile(_fileName, _gridView.Text);
+        }
+
+        public void CompareTo(IList<ViewItem> dict)
+        {
+            if(dict == null || _gridView.Rows.Count < 1)
+            {
+                return;
+            }
+
+            for(int i = 0; i < _gridView.Rows.Count; i++)
+            {
+                foreach (var viewItem in dict)
+                {
+                    if ((String)_gridView[0, i].Value == viewItem.Word)
+                    {
+                        _gridView[0, i].Style.BackColor = Color.Yellow;
+                    }
+                }
+            }
         }
 
         //private String 

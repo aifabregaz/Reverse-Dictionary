@@ -72,7 +72,9 @@
     <Compile Include="FileLoader\RtfTextLoader.cs" />
     <Compile Include="FileLoader\TextLoaderFactory.cs" />
     <Compile Include="FileLoader\TxtTextLoader.cs" />
+    <Compile Include="FileSaver\ITextSaver.cs" />
     <Compile Include="FileSaver\TxtTextSaver.cs" />
+    <Compile Include="FileSaver\XlsTextSaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

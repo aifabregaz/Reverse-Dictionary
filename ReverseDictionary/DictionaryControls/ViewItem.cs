@@ -2,7 +2,7 @@
 
 namespace ReverseDictionary.DictionaryControls
 {
-    internal class ViewItem
+    public class ViewItem
     {
         public String Word { get; set; }
 

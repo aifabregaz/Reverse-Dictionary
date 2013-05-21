@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace TextLoader.FileSaver
 {
-    public class TxtTextSaver
+    public class TxtTextSaver : ITextSaver
     {
-        public void SaveFile(String path, String text)
+        public void SaveFile(String path, List<String> text)
         {
-            using(var streamWriter = new StreamWriter(path))
-            {
-                streamWriter.Write(text);
-            }
+            File.WriteAllLines(path, text);
         }
         public override string ToString()
         {
