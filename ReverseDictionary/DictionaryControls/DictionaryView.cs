@@ -48,14 +48,21 @@ namespace ReverseDictionary.DictionaryControls
                                                               new LemmatizerPrebuiltCompact((LanguagePrebuilt)_langComboBox.SelectedItem));
 
                 // TODO: do it with backgroung worker due to hangling gui
-                _gridView.DataSource = _dictionary.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
+                SetDataSource(_dictionary);
+
                 EnableSaveButtons(true);
+                EnableChangeSortOrderButton(true);
             }
         }
 
         public void EnableMakeDictionaryButton(bool value)
         {
             _makeButton.Enabled = value;
+        }
+
+        private void SetDataSource(IDictionary<String, int> dict)
+        {
+            _gridView.DataSource = dict.Select(x => new ViewItem { Count = x.Value, Word = x.Key }).ToList();
         }
 
         private void MakeButtonClick(object sender, EventArgs e)
@@ -149,6 +156,7 @@ namespace ReverseDictionary.DictionaryControls
             _dictionary = _sortDirectionButton.Checked 
                 ? new SortedDictionary<string, int>(_dictionary, new ReverseStringComparer()) 
                 : new SortedDictionary<string, int>(_dictionary);
+            SetDataSource(_dictionary);
         }
 
         private void SaveFile()
