@@ -37,6 +37,7 @@
             this._makeButton = new System.Windows.Forms.ToolStripButton();
             this._langComboBox = new System.Windows.Forms.ToolStripComboBox();
             this._sortDirectionButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this._gridView = new System.Windows.Forms.DataGridView();
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,8 @@
             this.toolStripSeparator1,
             this._makeButton,
             this._langComboBox,
-            this._sortDirectionButton});
+            this._sortDirectionButton,
+            this.toolStripButton2});
             this._toolStrip.Location = new System.Drawing.Point(0, 0);
             this._toolStrip.Name = "_toolStrip";
             this._toolStrip.Size = new System.Drawing.Size(286, 25);
@@ -114,7 +116,7 @@
             // _langComboBox
             // 
             this._langComboBox.Name = "_langComboBox";
-            this._langComboBox.Size = new System.Drawing.Size(121, 25);
+            this._langComboBox.Size = new System.Drawing.Size(100, 25);
             this._langComboBox.ToolTipText = "Source text language";
             // 
             // _sortDirectionButton
@@ -131,6 +133,16 @@
             this._sortDirectionButton.Text = "Sort Direction";
             this._sortDirectionButton.ToolTipText = "Reverse sorting";
             this._sortDirectionButton.CheckedChanged += new System.EventHandler(this.SortingOrderChanged);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::ReverseDictionary.Properties.Resources.start_here;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.SaveCompared);
             // 
             // _gridView
             // 
@@ -206,6 +218,7 @@
         private System.Windows.Forms.SaveFileDialog _saveFileDialog;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton _sortDirectionButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
 
     }
 }

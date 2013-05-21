@@ -201,10 +201,83 @@ namespace ReverseDictionary.DictionaryControls
                         _gridView[0, i].Style.BackColor = Color.Yellow;
                     }
                 }
+                if (_gridView[0, i].Style.BackColor != Color.Yellow)
+                {
+                    _gridView[0, i].Style.BackColor = Color.Green;
+                }
             }
+
         }
 
-        //private String 
+        private void SaveCompared(Object sender, EventArgs e)
+        {
+            SaveIntersection();
+            SaveDifferentWords();
+        }
 
+        private void SaveIntersection()
+        {
+            _saveFileDialog.Filter = "Text files (*.txt)|*.txt| Excel files (*.xls)|*.xls";
+            _saveFileDialog.Title = "Save words included in another dictionary";
+            _saveFileDialog.FileName = Path.GetFileName(_fileName);
+            if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            if (_saveFileDialog.FilterIndex == 1)
+            {
+                _saver = new TxtTextSaver();
+            }
+            else
+            {
+                _saver = new XlsTextSaver();
+            }
+
+            var path = _saveFileDialog.FileName;
+
+            List<String> records = new List<String>();
+
+            for (int i = 0; i < _gridView.Rows.Count; i++)
+            {
+                if (_gridView[0, i].Style.BackColor == Color.Yellow)
+                {
+                    records.Add(_gridView[0, i].Value + " " + _gridView[1, i].Value);
+                }
+            }
+
+            _saver.SaveFile(path, records);
+
+        }
+
+        private void SaveDifferentWords()
+        {
+            _saveFileDialog.Filter = "Text files (*.txt)|*.txt| Excel files (*.xls)|*.xls";
+            _saveFileDialog.Title = "Save words not included in another dictionary";
+            _saveFileDialog.FileName = Path.GetFileName(_fileName);
+            if (_saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            if (_saveFileDialog.FilterIndex == 1)
+            {
+                _saver = new TxtTextSaver();
+            }
+            else
+            {
+                _saver = new XlsTextSaver();
+            }
+
+            var path = _saveFileDialog.FileName;
+
+            List<String> records = new List<String>();
+
+            for (int i = 0; i < _gridView.Rows.Count; i++)
+            {
+                if (_gridView[0, i].Style.BackColor == Color.Green)
+                {
+                    records.Add(_gridView[0, i].Value + " " + _gridView[1, i].Value);
+                }
+            }
+
+            _saver.SaveFile(path, records);
+        }
     }
 }
